@@ -37,4 +37,5 @@ next-env.d.ts
 
 cmd
 npx shadcn-ui@latest init
-
+npx shadcn-ui@latest add popover
+npm i @headlessui/react
