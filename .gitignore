@@ -39,3 +39,6 @@ cmd
 npx shadcn-ui@latest init
 npx shadcn-ui@latest add popover
 npm i @headlessui/react
+npx shadcn-ui@latest add form
+npx shadcn-ui@latest add input
+npx shadcn-ui@latest add calendar
