@@ -79,9 +79,9 @@ function SearchForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col lg:flex-row lg:max-w-6xl lg:mx-auto items-center justify-center space-x-0 lg:space-x-2 space-y-4 lg:space-y-0 rounded-lg"
+        className="flex flex-col lg:flex-row lg:max-w-6xl lg:mx-auto items-center justify-center space-x-0 lg:space-x-2 space-y-4 lg:space-y-0 rounded-lg "
       >
-        <div className="grid w-full lg:max-w-sm items-center gap-1.5">
+        <div className="grid w-full lg:max-w-sm items-center gap-1.5 ">
           <FormField
             control={form.control}
             name="location"
@@ -89,13 +89,13 @@ function SearchForm() {
               <FormItem>
                 <FormLabel className="text-white flex">
                   Location
-                  <BedDoubleIcon className="ml-2 h-4 w-4 text-white" />
+                  <BedDoubleIcon className="ml-2 h-4 w-4 " />
                 </FormLabel>
 
                 <FormMessage />
 
                 <FormControl>
-                  <Input placeholder="Delhi, India" {...field} />
+                  <Input placeholder="Delhi, India" {...field} className="text-white" />
                 </FormControl>
               </FormItem>
             )}
@@ -107,8 +107,8 @@ function SearchForm() {
             control={form.control}
             name="dates"
             render={({ field }) => (
-              <FormItem className="flex flex-col">
-                <FormLabel className="text-white">Dates</FormLabel>
+              <FormItem className="flex flex-col text-white">
+                <FormLabel >Dates</FormLabel>
                 <FormMessage />
 
                 <Popover>
@@ -119,11 +119,11 @@ function SearchForm() {
                         name="dates"
                         variant={"outline"}
                         className={cn(
-                          "w-full lg:w-[300px] justify-start text-left font-normal",
+                          "w-full lg:w-[300px] justify-start text-left font-normal text-white",
                           !field.value.from && "text-muted-foreground"
                         )}
                       >
-                        <CalendarIcon className="mr-3 h-4 w-4 opacity-50" />
+                        <CalendarIcon className="mr-3 h-4 w-4 opacity-50 text-white" />
                         {field.value?.from ? (
                           field.value?.to ? (
                             <>
@@ -134,7 +134,7 @@ function SearchForm() {
                             format(field.value?.from, "LLL dd, y")
                           )
                         ) : (
-                          <span>Select your dates</span>
+                          <span className="text-white">Select your dates</span>
                         )}
                       </Button>
                     </FormControl>
@@ -168,7 +168,7 @@ function SearchForm() {
                   <FormLabel className="text-white">Adults</FormLabel>
                   <FormMessage />
                   <FormControl>
-                    <Input type="number" placeholder="Adults" {...field} />
+                    <Input type="number" placeholder="Adults" {...field} className="text-white"/>
                   </FormControl>
                 </FormItem>
               )}
@@ -184,7 +184,7 @@ function SearchForm() {
                   <FormLabel className="text-white">Children</FormLabel>
                   <FormMessage />
                   <FormControl>
-                    <Input type="number" placeholder="Children" {...field} />
+                    <Input type="number" placeholder="Children" {...field} className="text-white" />
                   </FormControl>
                 </FormItem>
               )}
@@ -200,7 +200,7 @@ function SearchForm() {
                   <FormLabel className="text-white">Rooms</FormLabel>
                   <FormMessage />
                   <FormControl>
-                    <Input type="number" placeholder="rooms" {...field} />
+                    <Input type="number" placeholder="rooms" {...field} className="text-white" />
                   </FormControl>
                 </FormItem>
               )}

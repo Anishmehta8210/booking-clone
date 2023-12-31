@@ -42,3 +42,6 @@ npm i @headlessui/react
 npx shadcn-ui@latest add form
 npx shadcn-ui@latest add input
 npx shadcn-ui@latest add calendar
+npx shadcn-ui@latest add skeleton
+
+curl 'https://realtime.oxylabs.io/v1/queries' --user 'anish_anand:QmAaBC_yp2bMtN' -H 'Content-Type: application/json' -d '{"source": "universal", "url": "https://sandbox.oxylabs.io/products/", "geo-location": "United States", "render": "html"}' -v 
